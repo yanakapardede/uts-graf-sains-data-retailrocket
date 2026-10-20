@@ -49,6 +49,12 @@ Visualisasi struktur graf menunjukkan perbedaan kondisi sebelum dan sesudah pena
 * Kondisi Sebelum: Hanya terdapat interaksi dasar antara Visitor, relasi VIEWED, dan Item.
 * Kondisi Sesudah: Terbentuk jaringan relasi kemiripan langsung antar produk melalui relasi SIMILAR_TO.
 
+## Konfigurasi Keamanan dan Kredensial Database
+Demi keamanan, kredensial akses basis data Neo4j pada notebook ini disesuaikan menggunakan placeholder. Jika Anda ingin mereplikasi atau menjalankan ulang kode di lingkungan lokal:
+1. Pastikan layanan Neo4j lokal Anda sudah aktif.
+2. Buka sel koneksi Neo4j di dalam notebook.
+3. Ubah variabel `AUTH = ("neo4j", "YOUR_NEO4J_PASSWORD")` dengan mengganti `"YOUR_NEO4J_PASSWORD"` sesuai dengan password instance Neo4j lokal Anda.
+
 ## Struktur Direktori
 ```text
 .
