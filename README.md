@@ -20,6 +20,10 @@ Metode utama yang digunakan adalah pembentukan Vector Space Model (VSM) dengan t
 * Pemodelan dan VSM: scipy.sparse.csr_matrix, sklearn.metrics.pairwise.cosine_similarity
 * Konektor dan Visualisasi: neo4j (Python Driver), networkx, matplotlib
 
+## Dataset
+Dikarenakan ukuran file dataset mentah RetailRocket melebihi batas upload langsung di GitHub (100 MB), arsip dataset dapat diunduh melalui tautan eksternal berikut:
+* Tautan Unduh Dataset: [RetailRocket Dataset di Google Drive](https://drive.google.com/drive/folders/1u3JMehbQ9wFavSE_O5iXfsKydDRI7EEb?usp=sharing)
+
 ## Tahapan Pengerjaan dan Alur Kerja
 
 ### 1. Data Wrangling dan Filtering
@@ -49,6 +53,8 @@ Visualisasi struktur graf menunjukkan perbedaan kondisi sebelum dan sesudah pena
 * Kondisi Sebelum: Hanya terdapat interaksi dasar antara Visitor, relasi VIEWED, dan Item.
 * Kondisi Sesudah: Terbentuk jaringan relasi kemiripan langsung antar produk melalui relasi SIMILAR_TO.
 
+![Visualisasi Perbandingan Graf](graph_comparison.png)
+
 ## Konfigurasi Keamanan dan Kredensial Database
 Demi keamanan, kredensial akses basis data Neo4j pada notebook ini disesuaikan menggunakan placeholder. Jika Anda ingin mereplikasi atau menjalankan ulang kode di lingkungan lokal:
 1. Pastikan layanan Neo4j lokal Anda sudah aktif.
@@ -58,8 +64,7 @@ Demi keamanan, kredensial akses basis data Neo4j pada notebook ini disesuaikan m
 ## Struktur Direktori
 ```text
 .
-├── data/
-│   ├── events.csv               # Dataset mentah RetailRocket
-│   └── events_filtered.csv      # Dataset hasil penyaringan tanggal
-├── Yanaka Sofia Pardede_UTS_GrafSainsData.ipynb # Notebook utama
+├── .gitignore                   # Konfigurasi file yang diabaikan Git
+├── graph_comparison.png         # Gambar visualisasi struktur graf
+├── 065_Yanaka Sofia Pardede...  # Jupyter Notebook utama proyek
 └── README.md                    # Dokumentasi proyek
